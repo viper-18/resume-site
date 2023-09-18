@@ -29,7 +29,7 @@ pipeline {
                 script {
                     sh "docker stop ${DOCKER_CONTAINER} || true"
                     sh "docker rm ${DOCKER_CONTAINER} || true"
-                    sh "docker run -itd -p 8005:8000 --name ${DOCKER_CONTAINER} ${DOCKER_IMAGE}"
+                    sh "docker run -itd -p 8000:8000 --name ${DOCKER_CONTAINER} ${DOCKER_IMAGE}"
                 }
             }
         }
