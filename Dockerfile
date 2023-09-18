@@ -5,16 +5,16 @@ FROM python:3.8
 WORKDIR /app
 
 # Clone the GitHub repository
-RUN git clone https://github.com/viper-18/cv-site.git .
+RUN git clone https://github.com/viper-18/flipkart-ms.git .
 
-# Change working directory to the subdirectory containing manage.py
-WORKDIR /app/cv_site
+# # Change working directory to the subdirectory containing manage.py
+# WORKDIR /app/cv_site
 
-# Install Django and other dependencies
-RUN pip install django
+# # Install Django and other dependencies
+# RUN pip install django
 
-# Expose port 8000 for Django
-EXPOSE 8000
+# # Expose port 8000 for Django
+# EXPOSE 8000
 
-# Define the command to run the Django application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# # Define the command to run the Django application
+# CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
