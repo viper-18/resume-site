@@ -7,8 +7,8 @@ WORKDIR /app
 # Clone the GitHub repository
 RUN git clone https://github.com/viper-18/cv-site.git .
 
-# Change working directory to the subdirectory containing manage.py
-WORKDIR /app/cv-site/
+# # Change working directory to the subdirectory containing manage.py
+# WORKDIR /app/cv-site/
 
 # Install Django and other dependencies
 RUN pip install django
@@ -17,4 +17,4 @@ RUN pip install django
 EXPOSE 8000
 
 # Define the command to run the Django application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "/app/cv-site/manage.py", "runserver", "0.0.0.0:8000"]
