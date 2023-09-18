@@ -3,9 +3,8 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_REGISTRY = 'your-docker-registry.com' // Replace with your Docker registry
-        DOCKER_IMAGE = "${DOCKER_REGISTRY}/my-django-app:${BUILD_NUMBER}"
-        DOCKER_CONTAINER = "my-django-container-${BUILD_NUMBER}"
+        DOCKER_IMAGE = "my-django-app:latest"
+        DOCKER_CONTAINER = "my-django-container"
     }
     
     stages {
@@ -19,7 +18,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def customImage = docker.build(DOCKER_IMAGE, '.')
+                    sh 'docker build -t ${DOCKER_IMAGE} .'
+                    // def customImage = docker.build(DOCKER_IMAGE, '.')
                 }
             }
         }
