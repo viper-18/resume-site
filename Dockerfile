@@ -8,7 +8,7 @@ WORKDIR /app
 RUN git clone https://github.com/viper-18/cv-site.git .
 
 # Change working directory to the subdirectory containing manage.py
-WORKDIR /app/cv-site/cv_site
+WORKDIR /app/cv-site/
 
 # Install Django and other dependencies
 RUN pip install django
