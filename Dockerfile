@@ -5,10 +5,10 @@ FROM python:3.8
 WORKDIR /app
 
 # Clone the GitHub repository
-RUN git clone https://github.com/viper-18/cv-site.git .
+RUN git clone https://github.com/viper-18/resume-site.git .
 
 # Change working directory to the subdirectory containing manage.py
-WORKDIR /app/cv_site
+WORKDIR /app/resume_site
 
 # Install Django and other dependencies
 RUN pip install django

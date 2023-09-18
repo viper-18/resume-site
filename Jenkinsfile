@@ -10,8 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh 'git pull https://github.com/viper-18/cv-site.git'
-                // #git branch: 'main', url: 'https://github.com/viper-18/cv-site.git'
+                sh 'git pull https://github.com/viper-18/resume-site.git'
             }
         }
 
